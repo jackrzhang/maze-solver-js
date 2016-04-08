@@ -7,7 +7,7 @@ function solveMaze(maze) {
 
     var startingPoint = new Point(0, 2);
     var startTime = getTime();
-    var endTime;
+    var endTime = startTime;
     traverseTheMaze(maze, startingPoint, direction, directionIndex, forward, iterations, startTime, endTime);
 }
 
@@ -45,21 +45,25 @@ function traverseTheMaze(maze, p, direction, directionIndex, forward, iterations
             if ( lookRight(maze, forward, p) !== '#' ) {
                 [forward, directionIndex] = turnRight(direction, directionIndex);
                 p = moveForward(maze, forward, p);
+                endTime = getTime();
                 traverseTheMaze(maze, p, direction, directionIndex, forward, iterations, startTime, endTime);
             }
             else if ( lookForward(maze, forward, p) !== '#' ) {
                 p = moveForward(maze, forward, p);
+                endTime = getTime();
                 traverseTheMaze(maze, p, direction, directionIndex, forward, iterations, startTime, endTime);
             }
             else if ( lookLeft(maze, forward, p) !=='#' ) {
                 [forward, directionIndex] = turnLeft(direction, directionIndex, forward);
                 p = moveForward(maze, forward, p);
+                endTime = getTime();
                 traverseTheMaze(maze, p, direction, directionIndex, forward, iterations, startTime, endTime); 
             }
             else { // Dead End
                 [forward, directionIndex] = turnRight(direction, directionIndex, forward);
                 [forward, directionIndex] = turnRight(direction, directionIndex, forward);
                 moveForward(maze, forward, p);
+                endTime = getTime();
                 traverseTheMaze(maze, p, direction, directionIndex, forward, iterations, startTime, endTime);
             }
         }
