@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+
+body {
+    background: rgb(250, 250, 250);
+    color: rgb(40, 40, 60);
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+/* Tablets & Desktops */
+
+.window-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+
+.credit {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: lowercase;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+
+a {
+    color: rgb(40, 40, 60);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(80, 80, 100);
+}
