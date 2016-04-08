@@ -6,3 +6,5 @@ DEFINITION:
 1) Read in the maze from text file
 2) Provide starting position
 3) Utilize right-hand rule to find the exit
+
+Output to console.
