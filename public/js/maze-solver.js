@@ -54,14 +54,14 @@ function traverseTheMaze(maze, p, direction, directionIndex, forward, iterations
                 traverseTheMaze(maze, p, direction, directionIndex, forward, iterations, startTime, endTime);
             }
             else if ( lookLeft(maze, forward, p) !=='#' ) {
-                [forward, directionIndex] = turnLeft(direction, directionIndex, forward);
+                [forward, directionIndex] = turnLeft(direction, directionIndex);
                 p = moveForward(maze, forward, p);
                 endTime = getTime();
                 traverseTheMaze(maze, p, direction, directionIndex, forward, iterations, startTime, endTime); 
             }
             else { // Dead End
-                [forward, directionIndex] = turnRight(direction, directionIndex, forward);
-                [forward, directionIndex] = turnRight(direction, directionIndex, forward);
+                [forward, directionIndex] = turnRight(direction, directionIndex);
+                [forward, directionIndex] = turnRight(direction, directionIndex);
                 moveForward(maze, forward, p);
                 endTime = getTime();
                 traverseTheMaze(maze, p, direction, directionIndex, forward, iterations, startTime, endTime);

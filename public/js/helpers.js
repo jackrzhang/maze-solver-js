@@ -1,13 +1,13 @@
-function turnRight(direction, directionIndex, forward) {
+function turnRight(direction, directionIndex) {
     directionIndex = (directionIndex + 1) % 4;
-    forward = direction[directionIndex];
+    var forward = direction[directionIndex];
 
     return [forward, directionIndex];
 }
 
-function turnLeft(direction, directionIndex, forward) {
+function turnLeft(direction, directionIndex) {
     directionIndex = (directionIndex + 3) % 4;
-    forward = direction[directionIndex];
+    var forward = direction[directionIndex];
 
     return [forward, directionIndex];
 }

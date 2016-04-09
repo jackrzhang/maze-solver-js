@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tests - Maze Solver</title>
+    <link rel="stylesheet" href="mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="mocha.js"></script>
+    <script src="chai.js"></script>
+    
+    <script>mocha.setup('bdd')</script>
+
+    <!-- tests -->
+    <script src="tests.js"></script>
+
+    <!-- test files -->
+    <script src="../public/js/helpers.js"></script>
+    <script src="../public/js/maze-solver.js"></script>
+
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
