@@ -1,24 +1,20 @@
 $(document).ready(function() {
-    var maze = getText('maze.txt', parseMaze);
-    solveMaze(maze);
+    getText('maze.txt', function(data) {
+        var maze = parseMaze(data);
+        solveMaze(maze);
+    });
 });
 
 function getText(file, callback) {
-    var text;
-
     $.ajax({
         url: file,
         dataType: 'text',
         success: function(response) {
             if (callback && typeof(callback) === 'function') {
-                text = callback(response);
-                //console.log('AJAX success.');
+                callback(response);
             }
-        },
-        async: false
+        }
     }); 
-
-    return text;
 }
 
 function parseMaze(data) {
